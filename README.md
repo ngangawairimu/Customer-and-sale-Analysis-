@@ -1,14 +1,59 @@
-# Customer-and-sale-Analysis-
-Google Big Query
-### Overview
-This project involves extracting and analyzing data from the AdventureWorks database.
+# Sales Analysis and Customer Insights
 
-## Tasks:
-### Products
+This repository contains SQL queries for analyzing customer data and sales figures.
 
-Extract product data including subcategory and category names, ordered by category name.
-Identify the most expensive bikes (over $2000) that are actively sold.
-### Work Orders
+## Table of Contents
 
-Aggregate work orders for January 2004 by location, including unique work orders, products, total actual cost, and average duration.
-Select work orders with costs above $300 for January 2004.
+1. [Customer Analysis](#customer-analysis)
+2. [Sales Reporting](#sales-reporting)
+
+## Customer Analysis
+
+### Detailed Customer Overview
+
+Retrieves top 200 customers with:
+- **Identity Info**: CustomerId, FullName, addressing_title
+- **Contact Info**: Email, phone, account number, CustomerType
+- **Location**: City, State, Country, address
+- **Sales Data**: Number of orders, total amount (with Tax), last order date
+
+### Inactive Customer Segmentation
+
+Finds the top 200 customers (by total amount) who haven’t ordered in the last 365 days.
+
+### Customer Activity Status
+
+Adds a column to mark customers as 'active' or 'inactive' based on their order history in the last 365 days. Returns top 500 rows.
+
+### North American Active Customers
+
+Lists active North American customers with:
+- Orders totaling $2500+ (with Tax) or
+- 5+ orders
+
+Splits address into AddressLine1, address_no, Address_st. Orders by country, state, and last order date.
+
+## Sales Reporting
+
+### Monthly Sales Numbers
+
+Shows monthly sales figures by Country and Region:
+- Orders count
+- Customers count
+- Salespersons count
+- Total amount with tax
+
+### Cumulative Sales and Ranking
+
+Calculates cumulative sales and ranks regions by total amount (with tax).
+
+### Sales Tax Analysis
+
+Includes:
+- **Mean Tax Rate**: Average tax rate per country
+- **Percentage of Provinces with Tax Rates**
+
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/yourusername/sales-analysis.git
