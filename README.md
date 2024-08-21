@@ -2,6 +2,12 @@
 
 This repository contains SQL queries for analyzing customer data and sales figures.
 
+## Data source
+AdventureWorks company data (already in uploaded file)
+
+## Tool used
+Google BigQuerry
+
 ## Table of Contents
 
 1. [Customer Analysis](#customer-analysis)
@@ -11,7 +17,7 @@ This repository contains SQL queries for analyzing customer data and sales figur
 
 ### Detailed Customer Overview
 
-Retrieves top 200 customers with:
+Retrieving top 200 customers with:
 - **Identity Info**: CustomerId, FullName, addressing_title
 - **Contact Info**: Email, phone, account number, CustomerType
 - **Location**: City, State, Country, address
@@ -19,19 +25,19 @@ Retrieves top 200 customers with:
 
 ### Inactive Customer Segmentation
 
-Finds the top 200 customers (by total amount) who haven’t ordered in the last 365 days.
+Finding the top 200 customers (by total amount) who haven’t ordered in the last 365 days.
 
 ### Customer Activity Status
 
-Adds a column to mark customers as 'active' or 'inactive' based on their order history in the last 365 days. Returns top 500 rows.
+Adding  a column to mark customers as 'active' or 'inactive' based on their order history in the last 365 days. Returns top 500 rows.
 
 ### North American Active Customers
 
-Lists active North American customers with:
+Listing  active North American customers with:
 - Orders totaling $2500+ (with Tax) or
 - 5+ orders
 
-Splits address into AddressLine1, address_no, Address_st. Orders by country, state, and last order date.
+Spliting address into AddressLine1, address_no, Address_st. Orders by country, state, and last order date.
 
 ## Sales Reporting
 
@@ -45,7 +51,7 @@ Shows monthly sales figures by Country and Region:
 
 ### Cumulative Sales and Ranking
 
-Calculates cumulative sales and ranks regions by total amount (with tax).
+Calculating cumulative sales and ranks regions by total amount (with tax).
 
 ### Sales Tax Analysis
 
